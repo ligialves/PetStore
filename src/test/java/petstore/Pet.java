@@ -9,6 +9,7 @@ import java.nio.file.Files;
 import java.nio.file.Paths;
 
 import static io.restassured.RestAssured.given;
+import static org.hamcrest.CoreMatchers.is;
 
 //Classe
 public class Pet {
@@ -27,6 +28,7 @@ public class Pet {
 
         // dado - quando - então
 
+
         // given - when - then
         given() // Dado
                 .contentType("application/json") // tipo de informação comum em API REST - antigamente eram "text/xml"
@@ -37,6 +39,8 @@ public class Pet {
         .then()
                 .log().all()  // request e response.
                 .statusCode(200)
+                .body("name", is("Coxinha"))
+                .body("status", is("available"))
         ;
     }
 
