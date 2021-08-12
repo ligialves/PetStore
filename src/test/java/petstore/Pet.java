@@ -9,7 +9,9 @@ import java.nio.file.Files;
 import java.nio.file.Paths;
 
 import static io.restassured.RestAssured.given;
+import static org.hamcrest.CoreMatchers.containsString;
 import static org.hamcrest.CoreMatchers.is;
+import static org.hamcrest.Matchers.contains;
 
 //Classe
 public class Pet {
@@ -41,7 +43,10 @@ public class Pet {
                 .statusCode(200)
                 .body("name", is("Coxinha"))
                 .body("status", is("available"))
-        ;
+                .body("category.name",is("cat")) // quando onde vai procurar é sem [] ou seja, normal
+                .body("tags.name",contains("mypet")) // quando vai procurar em uma lista
+
+                         ;
     }
 
 }
