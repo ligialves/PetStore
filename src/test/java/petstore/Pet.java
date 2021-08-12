@@ -35,7 +35,7 @@ public class Pet {
         .when() // Quando
                 .post(uri)
         .then()
-                .log().all()  // request e response
+                .log().all()  // request e response.
                 .statusCode(200)
         ;
     }
