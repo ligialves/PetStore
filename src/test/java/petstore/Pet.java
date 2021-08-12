@@ -26,6 +26,7 @@ public class Pet {
         String jsonBody = lerJson("db/pet1.json");
 
         // dado - quando - então
+
         // given - when - then
         given() // Dado
                 .contentType("application/json") // tipo de informação comum em API REST - antigamente eram "text/xml"
