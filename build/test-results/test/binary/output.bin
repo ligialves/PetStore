@@ -1,5 +1,5 @@
 Request method:	DELETE
-<Request URI:	https://petstore.swagger.io/v2/pet/1974080145
+<Request URI:	https://petstore.swagger.io/v2/pet/1974083145
 Proxy:			<none>
 Request params:	<none>
 Query params:	<none>
@@ -10,11 +10,18 @@
 Cookies:		<none>
 Multiparts:		<none>
 Body:			<none>
-HTTP/1.1 404 Not Found
-%Date: Fri, 13 Aug 2021 02:14:24 GMT
-Content-Length: 0
+HTTP/1.1 200 OK
+%Date: Wed, 25 Aug 2021 23:16:33 GMT
+ Content-Type: application/json
+Transfer-Encoding: chunked
 Connection: keep-alive
  Access-Control-Allow-Origin: *
 6Access-Control-Allow-Methods: GET, POST, DELETE, PUT
 DAccess-Control-Allow-Headers: Content-Type, api_key, Authorization
  Server: Jetty(9.2.9.v20150224)
+
+{
+    "code": 200,
+    "type": "unknown",
+    "message": "1974083145"
+}

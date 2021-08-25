@@ -32,15 +32,15 @@ public class Pet {
                 .then()  // Então
                 .log().all()
                 .statusCode(200)
-                .body("name", is("Atena"))
+                .body("name", is("Marinho"))
                 .body("status", is("available"))
-                .body("category.name", is("AX2345LORT"))
+                .body("category.name", is("AX2245LORT"))
                 .body("tags.name", contains("data"))
         ;
     }
     @Test(priority=2)
     public void consultarPet(){
-        String petId = "1974080145";
+        String petId = "1972020145";
         String token =
                 given()
                         .contentType("application/json")
@@ -50,8 +50,8 @@ public class Pet {
                         .then()
                         .log().all()
                         .statusCode(200)
-                        .body("name", is("Atena"))
-                        .body("category.name", is("AX2345LORT"))
+                        .body("name", is("Coxinha"))
+                        .body("category.name", is("AX2345COXIN"))
                         .body("status",is("available"))
                         .extract()
                         .path("category.name")
@@ -73,14 +73,14 @@ public class Pet {
                 .then()
                 .log().all()
                 .statusCode(200)
-                .body("name", is("Atena"))
+                .body("name", is("Coxinha"))
                 .body("status",is("sold"))
         ;
     }
 
     @Test (priority = 4)
     public void excluirPet(){
-        String petId = "1974080145";
+        String petId = "1974045135";
 
         given()
                 .contentType("application/json")

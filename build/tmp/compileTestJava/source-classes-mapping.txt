@@ -1,4 +1,2 @@
 petstore/Pet.java
  petstore.Pet
-petstore/Petv1.java
- petstore.Petv1
